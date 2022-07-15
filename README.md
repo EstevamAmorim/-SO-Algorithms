@@ -1,6 +1,6 @@
 # SO-Algorithms
 ## Description
-Python implementation of some algorithms executed by the OS during process scheduling, disk arm management and page replacement.
+Python implementation of some algorithms executed by the OS during process scheduling, disk arm scheduling and page replacement.
 
 ## Executing 
 

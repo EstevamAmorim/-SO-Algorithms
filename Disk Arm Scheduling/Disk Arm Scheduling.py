@@ -100,7 +100,3 @@ FCFS(copy.deepcopy(access_req), start_position)
 SSTF(copy.deepcopy(access_req), start_position)
 
 elevator(copy.deepcopy(access_req), start_position)
-
-
-
-
