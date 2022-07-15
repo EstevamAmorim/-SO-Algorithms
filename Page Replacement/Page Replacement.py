@@ -21,7 +21,7 @@ def convert(input):
     
     return (page_ref, page_frame)
 
-def segunda_chance(pag_ref, pag_frame):
+def second_chance(pag_ref, pag_frame):
     pag_fault = 0
     ref_count = 0
     memory = [[None, 0] for _ in range(pag_frame)]
@@ -64,9 +64,9 @@ def segunda_chance(pag_ref, pag_frame):
             for j in range(pag_frame):
                 memory[j][1] = 0
 
-    print('SC {}'.format(pag_fault))
+    print('SC       {}'.format(pag_fault))
 
-def algoritmo_otimo(pag_ref, pag_frame):
+def optimal_algorithm(pag_ref, pag_frame):
     pag_fault = 0
     memory = [[None, 0] for _ in range(pag_frame)]
     
@@ -111,9 +111,9 @@ def algoritmo_otimo(pag_ref, pag_frame):
             memory[last_ref][0] = pag_ref[i]
             pag_fault += 1
 
-    print('OTM {}'.format(pag_fault))
+    print('OPT      {}'.format(pag_fault))
 
-def conjunto_de_trabalho(pag_ref, pag_frame):
+def working_set(pag_ref, pag_frame):
     pag_fault = 0
     ref_count = 0
     virtual_time = 0
@@ -163,13 +163,15 @@ def conjunto_de_trabalho(pag_ref, pag_frame):
             for j in range(pag_frame):
                 memory[j][1] = 0
 
-    print('CT {}'.format(pag_fault))
+    print('WS       {}'.format(pag_fault))
 
 
 pag_ref, pag_frame = convert(input)
 
-segunda_chance(copy.deepcopy(pag_ref), pag_frame)
+print('    PAGE FAULTS')
 
-algoritmo_otimo(copy.deepcopy(pag_ref), pag_frame)
+second_chance(copy.deepcopy(pag_ref), pag_frame)
 
-conjunto_de_trabalho(copy.deepcopy(pag_ref), pag_frame)
+optimal_algorithm(copy.deepcopy(pag_ref), pag_frame)
+
+working_set(copy.deepcopy(pag_ref), pag_frame)

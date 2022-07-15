@@ -21,7 +21,7 @@ def convert(input):
     
     return st
 
-def prioridades_dinamicas(st):
+def dynamic_priority(st):
     avg_return = 0
     avg_arrival = 0
     avg_waiting = 0
@@ -71,9 +71,9 @@ def prioridades_dinamicas(st):
     avg_arrival /= num_of_proc
     avg_waiting /= num_of_proc
 
-    print('PRI {:.2f} {:.2f} {:.2f}'.format(avg_return, avg_arrival, avg_waiting))
+    print('PRI    {:.2f}       {:.2f}         {:.2f}'.format(avg_return, avg_arrival, avg_waiting))
 
-def loteria(st):
+def lottery(st):
     avg_return = 0
     avg_arrival = 0
     avg_waiting = 0
@@ -132,7 +132,7 @@ def loteria(st):
     avg_arrival /= num_of_proc
     avg_waiting /= num_of_proc
 
-    print('LOT {:.2f} {:.2f} {:.2f}'.format(avg_return, avg_arrival, avg_waiting))
+    print('LOT    {:.2f}       {:.2f}         {:.2f}'.format(avg_return, avg_arrival, avg_waiting))
 
 def round_robin(st):
     avg_return = 0
@@ -195,13 +195,15 @@ def round_robin(st):
     avg_arrival /= num_of_proc
     avg_waiting /= num_of_proc
 
-    print('RR {:.2f} {:.2f} {:.2f}'.format(avg_return, avg_arrival, avg_waiting))
+    print('RR     {:.2f}       {:.2f}         {:.2f}'.format(avg_return, avg_arrival, avg_waiting))
 
 
 st_proc = convert(input)
 
-prioridades_dinamicas(copy.deepcopy(st_proc))
+print('    AVG RETURN  AVG ARRIVAL  AVG WAITING')
 
-loteria(copy.deepcopy(st_proc))
+dynamic_priority(copy.deepcopy(st_proc))
+
+lottery(copy.deepcopy(st_proc))
 
 round_robin(copy.deepcopy(st_proc))
