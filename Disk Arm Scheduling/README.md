@@ -1,7 +1,7 @@
-# Disk Arm Algorihm
+# Disk Arm Algorithm
 ## Algorithms
-FCFS (First Come First Served)
-SSTF (Shortest Seek Time First)
+FCFS (First Come First Served)  
+SSTF (Shortest Seek Time First)  
 Elevator
 
 ## Input

@@ -1,7 +1,7 @@
 # Page Replacement
 ## Algorithms
-Second Chance
-Optimal Algorithm
+Second Chance  
+Optimal Algorithm  
 Working Set
 
 ## Input

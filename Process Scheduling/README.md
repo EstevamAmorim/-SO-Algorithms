@@ -1,7 +1,7 @@
 # Process Scheduling
 ## Algorithms
-Dynamic Priority
-Lottery
+Dynamic Priority  
+Lottery  
 Round Robin
 
 ## Input
